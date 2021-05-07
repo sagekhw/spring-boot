@@ -1,6 +1,7 @@
 package com.jpa.base.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -21,13 +22,9 @@ public class OrderDetail {
     private LocalDateTime order_at;
 
     @ManyToOne
+//    @JsonIgnore
     private User user; // user_id
 
     @ManyToOne
     private Item item; // item_id
 }
-
-
-
-
-
